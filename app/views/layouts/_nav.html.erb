@@ -1,7 +1,12 @@
   <div class="nav">
-     <p class="notice"><%= notice %></p>
+    <p style="color: green" class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <% if user_signed_in? %>
-      <%= button_to "LOG OUT", destroy_user_session_path, method: :delete, data: { turbo: false } %>
-    <% end %>
+    <div class="wrapper">
+      <div><h5><%= @title %></h5></div>
+      <div>
+        <% if user_signed_in? %>
+          <%= button_to "LOG OUT", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+        <% end %>
+      </div>
     </div>
+  </div>
