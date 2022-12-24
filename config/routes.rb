@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
   devise_for :users
 
@@ -11,13 +9,13 @@ Rails.application.routes.draw do
   # get 'home/index'
 
   authenticated :user do
-    root 'users#index'
+    root "users#index"
   end
 
   devise_scope :user do
     root to: 'devise/sessions#splash', as: :splash_root
   end
 
-
+  
   # get "/categories", to: "categories#index"
 end
