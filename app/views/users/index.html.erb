@@ -1,0 +1,19 @@
+<div>
+  <% if @user.categories.length > 0 %>
+    <% @user.categories.each do |category| %>  
+        <div class="main cat_listing category">
+            <span><%= category.icon %></span>
+            <span><%= category.name %></span>
+            <%= link_to "Add Payment", new_users_category_payment_path(category.id, cat_id: category.id) %>
+            <span class="edit_cat"><%= link_to "Edit", edit_users_category_path(category) %></span>
+            <div class="del_cat"><%= button_to "Del", users_category_path(category.id), method: :delete, data: { turbo: false} %> </div>
+            
+        </div>
+    <% end %>
+  <% else %>
+    <div class="card-body">
+        <p class="mt-2"> Please, add category </p>
+    </div>
+  <% end %>
+  <div class="main new_cat"><div class="w-rectangle"><%= link_to "Add category", new_users_category_path %></div>
+</div>

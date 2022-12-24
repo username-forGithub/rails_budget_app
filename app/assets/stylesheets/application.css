@@ -13,6 +13,44 @@
  *= require_tree .
  *= require_self
  */
+body{
+  display: flex;
+  justify-content: center;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+body > .wrapper{
+  min-height: 500px;
+}
+
+.main{
+  padding-right: 5px;
+  padding-left: 5px;
+}
+ .wrapper {
+  max-width: 370px;
+  width: 100%;
+  box-shadow: 0 0 1px 1px rgba(0,0,0,0.3);
+ }
+
+ .mybud{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3778c2;
+  padding-top: 100px;
+ }
+
+ .main-entry {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+ }
+
+ .nav, .nav a{
+  color: white;
+ }
+
  .nav button{
   font-size: 6px;
  }
@@ -24,6 +62,121 @@
  .nav .wrapper{
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: aquamarine;
+  justify-content: space-between;
+  background-color: #3778c2;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
  }
+
+ .new_cat{
+  margin-top: 50px;
+  text-align: center;
+  background-color: #5fb523; 
+  padding: 10px; 
+ }
+
+ .w-rectangle{
+  border: 1px solid white;
+  padding: 5px;
+ 
+ }
+
+ .w-rectangle a{
+  color: white;
+  text-decoration: none;
+ }
+
+ #categories{
+  margin-top: 30px;
+  font-size: 12px;
+ }
+
+ .category{
+  display: flex;
+  align-items: center;
+ }
+
+ .edit_cat{
+  margin-left: auto;
+  font-size: 10px;  
+ }
+
+ .name_cat{
+  margin-left: 5px;
+ }
+
+ .del_cat{
+  margin-left: 10px;
+ }
+ .del_cat button{
+  font-size: 6px;
+ }
+
+ .del_cat form{
+  display: flex;
+ }
+
+ .cat_listing {
+  padding: 5px;
+ }
+
+ .cat_listing:nth-child(odd){
+  background-color: rgb(217, 231, 226);
+ }
+
+ .cat_listing:nth-child(even){
+  background-color: rgb(193, 216, 230);
+ }
+
+ .cat_listing span:first-child{
+  margin-right: 5px;
+ }
+
+ .payments-row{
+  padding-top: 5px;
+  padding-bottom: 5px;
+ }
+
+ .payments-row:nth-child(odd){
+  background-color: #eef7e7;
+ }
+
+ .payments-row:nth-child(even){
+  background-color: #f7e7f7;
+ }
+
+ .payments-row{
+  display: flex;
+ }
+
+ .payments-row .mount{
+  margin-left: auto;
+ }
+
+ .back{
+  font-weight: 900;
+  margin-left: 5px;
+ }
+
+ .btn{
+  margin-right: 5px;
+ }
+
+ .name{
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 10px;
+ }
+
+ .sumwrap{
+  display: flex;
+  justify-content: space-between;
+ }
+
+ a{
+  text-decoration: none;
+ }
+
+
+

@@ -1,12 +1,18 @@
+  <% if user_signed_in? %>
   <div class="nav">
-    <p style="color: green" class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%# <p style="color: green" class="notice"><%= notice %>
+    <%# <p class="alert"><%= alert %>
     <div class="wrapper">
+      <a href="/" class="back"><</a>
+      <% if user_signed_in? %>
+        <div class="name">Hello, <%= current_user.name %></div>
+      <% end %>
       <div><h5><%= @title %></h5></div>
-      <div>
+      <div class="btn">
         <% if user_signed_in? %>
           <%= button_to "LOG OUT", destroy_user_session_path, method: :delete, data: { turbo: false } %>
         <% end %>
       </div>
     </div>
   </div>
+  <% end %>

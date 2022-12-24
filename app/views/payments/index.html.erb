@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="sumwrap">
+  <h3 class="main"><%= @pay.name %></h3>
+  <h3 class="main"><span>&#165;&nbsp;</span><%= @sum_of_col %></h3>
+</div>
+
+<div id="payments">
+
+  <% @payments.each do |payment| %>
+    <div class = "main payments-row">
+      <span><%= payment.name %></span>
+      <span class="mount"><span>&#165;&nbsp;</span><%= payment.mount %></span>
+    </div>
+
+  <% end %>
+</div>
+
+<div class="main new_cat"><div class="w-rectangle"><%= link_to "New payment", new_users_category_payment_path(cat_id: @pay.id) %></div>
