@@ -2,8 +2,7 @@ require 'rails_helper'
 
 RSpec.describe '/categories', type: :feature do
   before :each do
-    @user = User.create(name: 'Bush', email: 'test@example.com', password: 'password',
-                        password_confirmation: 'password')
+    @user = User.create(name: 'Bush', email: 'test@example.com', password: 'password')
     visit new_user_session_path
     within('body') do
       fill_in 'user_email', with: 'test@example.com'
@@ -14,7 +13,7 @@ RSpec.describe '/categories', type: :feature do
   end
 
   it 'Check homepage content' do
-    expect(page.body).to include('Hello, Bush')
+    expect(page.body).to include('Log out')
     expect(page.body).to include('Add category')
   end
 end
