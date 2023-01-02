@@ -2,7 +2,7 @@
  <% if user_signed_in? %>
   <div class="nav">   
     <div class="wrapper">
-      <a href="/" class="back"><%= image_tag("left") %></a>
+      <a href="/" class="back"><%= image_tag("left.png") %></a>
       <% if(@pay==nil && @newcat==nil && @cat_id==nil) %>
         <h5><%= 'CATEGORIES' %></h5> 
       <% elsif(@newcat=="NEW CATEGORY") %>
