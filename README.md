@@ -122,8 +122,8 @@ To run tests, run the following command:
 
 ### Deployment
 
-<p>Click [here](https://budget-1sn7.onrender.com//) to see live</p>
-<p>Click [here](https://www.loom.com/share/ecc2205a5a8d42f6b2a2e92b36f41a7f) to watch presentation</p>
+Click [here](https://budget-1sn7.onrender.com//) to see live</br>
+Click [here](https://www.loom.com/share/ecc2205a5a8d42f6b2a2e92b36f41a7f) to watch presentation
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
