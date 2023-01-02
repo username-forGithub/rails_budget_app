@@ -13,6 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+h5 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+h6 {
+  margin: 0;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -20,9 +30,13 @@ body {
 }
 
 body > .wrapper {
-  min-height: 400px;
-  min-width: 370px;
+  min-height: 450px;
+  max-width: 330px;
+  width: 100%;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
@@ -35,13 +49,8 @@ body > .wrapper {
   justify-content: center;
   align-items: center;
   color: #3778c2;
-  padding-top: 100px;
-}
-
-.main-entry {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+  padding-top: 130px;
+  padding-bottom: 100px;
 }
 
 a {
@@ -66,12 +75,61 @@ a {
   align-items: center;
   justify-content: space-between;
   background-color: #3778c2;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 15px;
+}
+
+.nav.nav2 {
+  flex-basis: 100%;
+}
+
+.nav2 .wrapper {
+  background-color: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.save-newcat > div {
+  display: flex;
+}
+
+.classbottom a {
+  font-size: 12px;
+  color: #abb2bc;
+}
+
+.cat_listing a {
+  display: contents;
+}
+
+.w-rectangle a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav2 .wrapper a {
+  color: #abb2bc;
+  font-size: 12px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nav2 .wrapper .main-entry {
+  width: 100%;
+}
+
+.nav2 .wrapper .main-entry div {
+  margin-top: 5px;
+}
+
+.nav2 .wrapper .main-entry div:not(.second) a {
+  background-color: #3778c2;
 }
 
 .new_cat {
-  margin-top: 50px;
+  margin-top: auto;
   text-align: center;
   background-color: #5fb523;
   padding: 10px;
@@ -80,11 +138,6 @@ a {
 .w-rectangle {
   border: 1px solid white;
   padding: 5px;
-}
-
-.w-rectangle a {
-  color: white;
-  text-decoration: none;
 }
 
 #categories {
@@ -105,6 +158,10 @@ a {
   margin-left: 5px;
 }
 
+form {
+  margin-top: 15px;
+}
+
 .del_cat {
   margin-left: 10px;
 }
@@ -117,53 +174,86 @@ a {
   display: flex;
 }
 
-.cat_listing {
-  padding: 5px;
-}
-
-.cat_listing a {
-  font-size: 10px;
+.cat_listing .amount-class {
+  font-size: 14px;
   margin-left: auto;
-  margin-right: 25px;
 }
 
-.cat_listing:nth-child(odd) {
-  background-color: rgb(217, 231, 226);
+.cat_listing {
+  background-color: white;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
 }
 
-.cat_listing:nth-child(even) {
-  background-color: rgb(193, 216, 230);
+.field label span {
+  font-size: 13px;
+  color: #434343;
+  font-weight: 300;
 }
 
 .cat_listing span:first-child {
   margin-right: 5px;
 }
 
+.icon-class {
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebe9e9;
+}
+
+.cat_name {
+  font-size: 14px;
+  color: #959595;
+}
+
 .payments-row {
   display: flex;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.payments-row:nth-child(odd) {
-  background-color: #eef7e7;
-}
-
-.payments-row:nth-child(even) {
-  background-color: #f7e7f7;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: white;
 }
 
 .payments-row .mount {
   margin-left: auto;
+  font-size: 14px;
+}
+
+.payments-row .icon-class {
+  margin-right: 5px;
+}
+
+.payment-name {
+  font-size: 14px;
+  color: #959595;
 }
 
 .back {
-  font-weight: 900;
-  margin-left: 5px;
+  width: 20px;
 }
 
-.btn {
-  margin-right: 5px;
+.back img {
+  width: 100%;
+}
+
+.btn form {
+  margin-top: 0;
+  display: flex;
+}
+
+.btn button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 10px;
 }
 
 .name {
@@ -175,4 +265,123 @@ a {
 .sumwrap {
   display: flex;
   justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#dsa {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#signupnone,
+#login1 {
+  display: none;
+}
+
+.field {
+  display: flex;
+}
+
+.field img {
+  width: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: 0.5;
+}
+
+.save-newcat input {
+  flex-grow: 1;
+}
+
+.catnewtitle input {
+  padding: 10px;
+}
+
+form .field input {
+  flex-grow: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 5px;
+  border: 1px solid #c5c6c7;
+}
+
+.field input:focus {
+  box-shadow: 0 0 3px 1px #e9eaea inset;
+  outline: none;
+  border-radius: 0;
+}
+
+.classbottom {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#user_imagefile {
+  display: none;
+}
+
+.field label {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#avatar {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: #fff;
+  border: 1px solid #c5c6c7;
+}
+
+.cat-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.after-nav {
+  flex-grow: 1;
+  display: flex;
+}
+
+.payment-wrapper {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-class {
+  flex-basis: 100%;
+}
+
+.save-newcat {
+  flex-basis: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-select {
+  flex-grow: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.save-newcat .w-rectangle {
+  flex-grow: 1;
+}
+
+.save-newcat .w-rectangle input {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.save-newcat .new_cat {
+  margin-top: auto;
 }

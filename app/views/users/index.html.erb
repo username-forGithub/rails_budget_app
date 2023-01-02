@@ -1,13 +1,20 @@
-<div>
+<div class="cat-wrapper">
   <% if @user.categories.length > 0 %>
     <% @user.categories.each do |category| %>  
         <div class="main cat_listing category">
-            <span><%= category.icon %></span>
-            <span><%= category.name %></span>
-            <%= link_to "Add Payment", new_users_category_payment_path(category.id, cat_id: category.id) %>
-            <span class="edit_cat"><%= link_to "Edit", edit_users_category_path(category) %></span>
-            <div class="del_cat"><%= button_to "Del", users_category_path(category.id), method: :delete, data: { turbo: false} %> </div>
-            
+
+            <%= link_to new_users_category_payment_path(category.id, cat_id: category.id) do %>
+              <span class="icon-class"><%= category.icon %></span>
+              <span class="cat_name"><%= category.name %></span>
+            <% end %>            
+            <% @sum_of_col = Payment.where(category_id: category.id, user_id: current_user).sum(:mount) %>
+            <h3 class="amount-class"><span>&#165;</span><%= @sum_of_col %></h3>
+
+            <% if false %>
+              <span class="edit_cat"><%= link_to "Edit", edit_users_category_path(category) %></span>
+              <div class="del_cat"><%= button_to "Del", users_category_path(category.id), method: :delete, data: { turbo: false} %> </div>
+            <% end %>
+
         </div>
     <% end %>
   <% else %>

@@ -13,6 +13,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new
   def new
     @category = Category.new
+    @newcat = 'NEW CATEGORY'
   end
 
   # GET /categories/1/edit

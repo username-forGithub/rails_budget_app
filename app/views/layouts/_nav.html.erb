@@ -1,18 +1,24 @@
-  <% if user_signed_in? %>
-  <div class="nav">
-    <%# <p style="color: green" class="notice"><%= notice %>
-    <%# <p class="alert"><%= alert %>
+
+ <% if user_signed_in? %>
+  <div class="nav">   
     <div class="wrapper">
-      <a href="/" class="back"><</a>
-      <% if user_signed_in? %>
-        <div class="name">Hello, <%= current_user.name %></div>
+      <a href="/" class="back"><%= image_tag("left") %></a>
+      <% if(@pay==nil && @newcat==nil && @cat_id==nil) %>
+        <h5><%= 'CATEGORIES' %></h5> 
+      <% elsif(@newcat=="NEW CATEGORY") %>
+        <h5><%= 'NEW CATEGORY' %></h5>
+      <% elsif(@cat_id) %>
+        <h5><%= 'NEW TRANSACTION' %></h5>
+      <% else %>      
+      <%= @pay.name.upcase %>
       <% end %>
-      <div><h5><%= @title %></h5></div>
       <div class="btn">
-        <% if user_signed_in? %>
-          <%= button_to "LOG OUT", destroy_user_session_path, method: :delete, data: { turbo: false } %>
-        <% end %>
-      </div>
+        <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+      </div>   
     </div>
   </div>
-  <% end %>
+ <% end %>
+
+
+
+  
