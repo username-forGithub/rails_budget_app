@@ -28,7 +28,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
+<!--PROJECT DESCRIPTION-->
 
 # 📖 BUDGET APP WITH ROR <a name="about-project"></a>
 
