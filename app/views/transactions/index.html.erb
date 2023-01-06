@@ -1,0 +1,17 @@
+
+<div class="sumwrap">
+  <h3 class="main"><%= 'Total' %></h3>
+  <h3 class="main"><span>&#165;&nbsp;</span><%= @sum_of_col %></h3>
+</div>
+<div id="transactions">
+  <% @transactions.each do |transaction| %>
+    <div class="cat-wrapper">
+      <%= render transaction %>    
+    </div>
+  <% end %>
+  <div class="main new-cat">
+    <div class="w-rectangle">
+      <%= link_to "Add transaction", new_category_transaction_url %>
+    </div>
+  </div>
+</div>

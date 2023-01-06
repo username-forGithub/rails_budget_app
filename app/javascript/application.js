@@ -4,7 +4,21 @@ import "controllers"
 import "jquery"
 
 $(document).on('ready turbo:load', function() {
-  $('#dsa').on("click", () => {       
+  $('#nav-btn').on("click", () => {       
     document.querySelector('#new_user').submit();
   });
+
+  setTimeout(function(){
+    $('.notice-wrapper').slideUp(500);
+  }, 4000);
+
+  var typed = new Typed('#typed',{
+    stringsElement: '#typed-strings',
+    startDelay: 1000,
+    backSpeed: 40,
+    typeSpeed: 40,
+    fadeOut: true,
+    fadeOutDelay: 200,
+    loop:true,
+  })
 });

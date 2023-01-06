@@ -1,12 +1,9 @@
-<div id="<%= dom_id category %>">
-  <p>
-    <strong>Name:</strong>
-    <%= category.name %>
-  </p>
-
-  <p>
-    <strong>Icon:</strong>
-    <%= category.icon %>
-  </p>
+<div id="<%= dom_id category %>">    
+    <%= link_to category_transactions_path(category) do %>
+      <span class="icon-wrapper"><%= category.icon %></span>
+      <span class="name-wrapper"><%= category.name %></span>
+    <% end %>
+    <% @sum_of_col = Transaction.where(category_id: category.id).sum(:amount) %>
+    <h3 class="amount-class"><span>¥</span><%= @sum_of_col %></h3>
 
 </div>

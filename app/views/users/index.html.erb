@@ -1,26 +1,17 @@
-<div class="cat-wrapper">
-  <% if @user.categories.length > 0 %>
-    <% @user.categories.each do |category| %>  
-        <div class="main cat_listing category">
+<p style="color: green"><%= notice %></p>
 
-            <%= link_to new_users_category_payment_path(category.id, cat_id: category.id) do %>
-              <span class="icon-class"><%= category.icon %></span>
-              <span class="cat_name"><%= category.name %></span>
-            <% end %>            
-            <% @sum_of_col = Payment.where(category_id: category.id, user_id: current_user).sum(:mount) %>
-            <h3 class="amount-class"><span>&#165;</span><%= @sum_of_col %></h3>
+<h1>Users,index</h1>
 
-            <% if false %>
-              <span class="edit_cat"><%= link_to "Edit", edit_users_category_path(category) %></span>
-              <div class="del_cat"><%= button_to "Del", users_category_path(category.id), method: :delete, data: { turbo: false} %> </div>
-            <% end %>
-
-        </div>
-    <% end %>
-  <% else %>
-    <div class="card-body">
-        <p class="mt-2"> Please, add category </p>
-    </div>
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this user", user %>
+    </p>
   <% end %>
-  <div class="main new_cat"><div class="w-rectangle"><%= link_to "Add category", new_users_category_path %></div>
 </div>
+
+<%= link_to "New user", new_user_path %>
+<h2><% if user_signed_in? %>
+          <%= button_to "LOG OUT", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+        <% end %></h2>

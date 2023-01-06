@@ -5,7 +5,7 @@
 # are not: uncommented lines are intended to protect your configuration from
 # breaking changes in upgrades (i.e., in the event that future versions of
 # Devise change the default values for those options).
-
+#
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'dbde96ce0c531979f762b322b07bcf39fbf2df162fac386b8cad33c8ba976625725ba7046e8c6eb2ecf97892d3f9c20bb54fc67b2c7502eea2cf49bec12b9c15'
+  # config.secret_key = 'afe352dcb653b9bc2bd2df46b6828c662d91e01a1d9482c82719bba453de1f32f31a1249375b482eeeccaac08b8c10d12a8659f059eff94093626a9d453c14d7'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '38d6e760eaa880e1afa6ed9c3b9ac73b4db6ba4f7f943e2c80b554f07ef8bfa8773bdaf8a4ae3782029267ec92b98d4881a59c84ce32284e4276b43f5f1b0061'
+  # config.pepper = 'a86d292f6ad65447bab48e423242b1b5ee6a49e23af59e764a8cdf274e8aaa2b307628caa0d5aa4a83e90f5eb5fd0927fc80f30db01ce4b7dbde1ff4b99c8ee4'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -272,7 +272,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.navigational_formats = ['*/*', :html, :turbo_stream]
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

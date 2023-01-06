@@ -1,15 +1,10 @@
-Rails.application.routes.draw do
-  devise_for :users
-  resource :users do
-    resources :categories do
-      resources :payments
-    end
-  end
-  authenticated :user do
-    root "users#index"
-  end
-  devise_scope :user do
-    root to: 'devise/sessions#splash', as: :splash_root
-  end
+# frozen_string_literal: true
 
+Rails.application.routes.draw do
+  devise_for :users, controllers: { registrations: 'registrations' }
+  root 'flash#index'
+  resources :users
+  resources :categories do
+    resources :transactions
+  end
 end
