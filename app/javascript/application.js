@@ -12,15 +12,17 @@ $(document).on('ready turbo:load', function() {
     $('.notice-wrapper').slideUp(500);
   }, 4000);
 
-  // if($('#typed')) {
-  //   var typed = new Typed('#typed',{
-  //     stringsElement: '#typed-strings',
-  //     startDelay: 1000,
-  //     backSpeed: 40,
-  //     typeSpeed: 40,
-  //     fadeOut: true,
-  //     fadeOutDelay: 200,
-  //     loop:true,
-  //   })
-  // }
+  let aa = document.querySelector('#typed')
+  
+  if(aa){
+    let typed = new Typed('#typed',{
+      stringsElement: '#typed-strings',
+      startDelay: 1000,
+      backSpeed: 40,
+      typeSpeed: 40,
+      fadeOut: true,
+      fadeOutDelay: 200,
+      loop:true,
+    })
+  }
 });
