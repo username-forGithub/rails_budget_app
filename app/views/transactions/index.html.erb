@@ -7,11 +7,13 @@
 <% end %>
 <div id="transactions">
   <% if @transactions.length > 0 %>
-    <% @transactions.each do |transaction| %>
-      <div class="cat-wrapper">
-        <%= render transaction %>    
-      </div>
-    <% end %>
+    <div class="content-wrapper">
+      <% @transactions.each do |transaction| %>
+        <div class="cat-wrapper">
+          <%= render transaction %>    
+        </div>
+      <% end %>
+    </div>
   <% else %>
   <div class="empty-body">
       <div id="typed-strings">
