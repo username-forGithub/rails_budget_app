@@ -131,7 +131,7 @@ form {
   align-items: center;
   border-radius: 20px 0 0 0;
   border: 1px solid rgba(55, 120, 194, 0.2);
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .save-newcat > div {
@@ -205,8 +205,17 @@ form {
   box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
 }
 
+.resend input {
+  font-size: 12px;
+  border: none;
+  color: #abb2bc;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
 .field {
   display: flex;
+  margin-bottom: 5px;
 }
 
 .field img {
@@ -254,10 +263,11 @@ form .field input {
 }
 
 #avatar {
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-top: 6px;
   background-color: #fff;
   border: 1px solid #c5c6c7;
+  margin-bottom: 5px;
 }
 
 #categories {
@@ -387,14 +397,6 @@ form .field input {
   margin-top: 20px;
 }
 
-input[value="Send me reset password instructions"] {
-  font-size: 12px;
-  border: none;
-  color: #abb2bc;
-  background-color: rgba(255, 255, 255, 0.7);
-  cursor: pointer;
-}
-
 .content-wrapper {
   overflow-y: auto;
 }
@@ -415,7 +417,7 @@ input[value="Send me reset password instructions"] {
     box-shadow: none;
   }
 
-  #categories, 
+  #categories,
   #transactions {
     overflow: hidden;
   }
