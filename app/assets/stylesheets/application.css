@@ -159,7 +159,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #3778c2;  
+  color: #3778c2;
 }
 
 .flash-page span {
@@ -355,4 +355,3 @@ form .field input {
     min-height: 100vh;
   }
 }
-
