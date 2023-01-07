@@ -398,6 +398,7 @@ input[value="Send me reset password instructions"] {
 
 @media (max-width: 375px) {
   body {
-    min-height: 100vh;
+    min-height: initial;
+    height: 100%;
   }
 }
