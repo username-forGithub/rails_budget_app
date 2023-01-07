@@ -1,0 +1,29 @@
+<%= form_with(model: category, class: 'save-newcat') do |form| %>
+  <% if category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>   
+    <%= form.select :icon, [['🚘'], ['🛒'], ['🍎'], ['📆'], ['📌']],
+                  { include_blank: "Choose icon" },
+                  { required: true, class: "form-select" }  %>
+  </div>
+
+  <div class="catnewtitle">
+    <%= form.text_field :name, placeholder: 'Category title ' %>
+  </div>
+
+  <div class="new-cat">
+    <div class="w-rectangle">
+      <%= form.submit 'Save', class: "new" %>
+    </div>
+  </div>
+<% end %>

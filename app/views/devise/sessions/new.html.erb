@@ -1,0 +1,17 @@
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+    <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, required: true, autocomplete: "current-password", placeholder: "Password" %>
+  </div>
+  <div class="actions" id="login1">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<div class="classbottom"><%= link_to "Forgot password?", new_password_path(resource_name) %></div>

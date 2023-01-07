@@ -1,0 +1,27 @@
+<%= form_with(model: transaction, :url => {action: :create}, class: 'save-newcat') do |form| %>
+  <% if transaction.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+      <ul>
+        <% transaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="catnewtitle">
+    <%= form.text_field :name, placeholder: "Title", required: true %>
+  </div>
+
+  <div class="catnewtitle">
+    <%= form.number_field :amount, placeholder: 'Mount', required: true %>
+  </div>
+
+  <div class="new-cat">
+    <div class="w-rectangle">
+      <%= form.submit 'Save', class: "new" %>
+    </div>
+  </div>
+<% end %>

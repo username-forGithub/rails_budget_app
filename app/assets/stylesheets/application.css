@@ -1,0 +1,424 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+h6 {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 700px;
+  margin: 0;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+body > .wrapper {
+  max-width: 375px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3) inset;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+body > .wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(bg.jpg);
+  z-index: -1;
+}
+
+.empty-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  font-size: 18px;
+  color: #3778c2;
+}
+
+.empty-body span {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav,
+.nav a {
+  color: white;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+}
+
+#nav-btn {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.nav img {
+  width: 22px;
+}
+
+.nav button {
+  font-size: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 15px;
+}
+
+.nav form {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav h5 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3778c2;
+  padding: 20px 15px;
+}
+
+.cat-wrapper a {
+  display: contents;
+}
+
+.cat-wrapper > div {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px 0 0 0;
+  border: 1px solid rgba(55, 120, 194, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.save-newcat > div {
+  display: flex;
+}
+
+.save-newcat input {
+  flex-grow: 1;
+}
+
+.catnewtitle input {
+  padding: 10px;
+}
+
+.classbottom a {
+  font-size: 12px;
+  color: #abb2bc;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+}
+
+.flash-page {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.flash-page h1 {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3778c2;
+}
+
+.flash-page span {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.7);
+}
+
+.flash-page .wrapper {
+  padding-bottom: 50px;
+}
+
+.flash-page .wrapper > div {
+  background-color: #3778c2;
+  margin-top: 20px;
+}
+
+.flash-page .wrapper > div a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+#signupnone,
+#login1 {
+  display: none;
+}
+
+.w-rectangle input {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.notice-wrapper span {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+}
+
+.resend input {
+  font-size: 12px;
+  border: none;
+  color: #abb2bc;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.field {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.field img {
+  width: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: 0.5;
+}
+
+form .field input {
+  flex-grow: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 5px;
+  border: 1px solid #c5c6c7;
+}
+
+.field input:focus {
+  box-shadow: 0 0 3px 1px #e9eaea inset;
+  outline: none;
+  border-radius: 0;
+}
+
+.classbottom {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#user_imagefile {
+  display: none;
+}
+
+.field label {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.field label span {
+  font-size: 13px;
+  color: #434343;
+  font-weight: 300;
+}
+
+#avatar {
+  padding-bottom: 6px;
+  padding-top: 6px;
+  background-color: #fff;
+  border: 1px solid #c5c6c7;
+  margin-bottom: 5px;
+}
+
+#categories {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  padding-top: 5px;
+}
+
+.w-rectangle {
+  flex-grow: 1;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.new-cat {
+  margin-top: auto;
+  text-align: center;
+  background-color: #5fb523;
+  padding: 10px;
+}
+
+.save-newcat {
+  flex-basis: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-select {
+  flex-grow: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.icon-wrapper {
+  width: 45px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(55, 120, 194, 0.1);
+  margin-right: 10px;
+  padding-bottom: 5px;
+  border-radius: 15px 0 0 0;
+}
+
+.name-wrapper {
+  font-size: 14px;
+  color: #065ec2;
+  font-weight: 600;
+}
+
+.cat-wrapper .amount-class {
+  font-size: 14px;
+  margin-left: auto;
+  color: #065ec2;
+  font-weight: 600;
+  padding-right: 5px;
+}
+
+.cat-wrapper > div > span {
+  display: contents;
+}
+
+#categories > div:nth-last-child(2),
+#transactions > div:nth-last-child(2) {
+  margin-bottom: 15px;
+}
+
+#transactions {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.sumwrap {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #3778c2;
+}
+
+.w-rectangle .new {
+  cursor: pointer;
+}
+
+.notice-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.note {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.field_with_errors {
+  display: flex;
+  flex-grow: 1;
+}
+
+#error_explanation {
+  padding: 10px;
+}
+
+#error_explanation h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: red;
+}
+
+#error_explanation ul {
+  list-style: none;
+  color: red;
+  font-size: 14px;
+  padding-left: 0;
+}
+
+.resend {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.content-wrapper {
+  overflow-y: auto;
+}
+
+@media (min-width: 375px) {
+  body > .wrapper {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    min-height: initial;
+    height: 100%;
+  }
+
+  body > .wrapper {
+    box-shadow: none;
+  }
+
+  #categories,
+  #transactions {
+    overflow: hidden;
+  }
+}
