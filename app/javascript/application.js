@@ -12,13 +12,15 @@ $(document).on('ready turbo:load', function() {
     $('.notice-wrapper').slideUp(500);
   }, 4000);
 
-  var typed = new Typed('#typed',{
-    stringsElement: '#typed-strings',
-    startDelay: 1000,
-    backSpeed: 40,
-    typeSpeed: 40,
-    fadeOut: true,
-    fadeOutDelay: 200,
-    loop:true,
-  })
+  if($('#typed')) {
+    var typed = new Typed('#typed',{
+      stringsElement: '#typed-strings',
+      startDelay: 1000,
+      backSpeed: 40,
+      typeSpeed: 40,
+      fadeOut: true,
+      fadeOutDelay: 200,
+      loop:true,
+    })
+  }
 });
