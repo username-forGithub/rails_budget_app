@@ -131,6 +131,7 @@ form {
   align-items: center;
   border-radius: 20px 0 0 0;
   border: 1px solid rgba(55, 120, 194, 0.2);
+  background-color: rgba(255,255,255,0.3);
 }
 
 .save-newcat > div {
@@ -414,6 +415,7 @@ input[value="Send me reset password instructions"] {
     box-shadow: none;
   }
 
+  #categories, 
   #transactions {
     overflow: hidden;
   }

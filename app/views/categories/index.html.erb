@@ -1,11 +1,13 @@
 
 <div id="categories">
   <% if @categories.length > 0 %>
-    <% @categories.each do |category| %>
-      <div class="cat-wrapper">
-        <%= render category %>        
-      </div>
-    <% end %>
+    <div class="content-wrapper">
+      <% @categories.each do |category| %>
+        <div class="cat-wrapper">
+          <%= render category %>        
+        </div>
+      <% end %>
+    </div>
   <% else %>
     <div class="empty-body">
       <div id="typed-strings">
