@@ -405,4 +405,8 @@ input[value="Send me reset password instructions"] {
     min-height: initial;
     height: 100%;
   }
+
+  body > .wrapper {
+    box-shadow: none;
+  }
 }
