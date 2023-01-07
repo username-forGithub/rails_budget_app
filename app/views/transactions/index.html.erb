@@ -1,13 +1,26 @@
 
-<div class="sumwrap">
-  <h3 class="main"><%= 'Total' %></h3>
-  <h3 class="main"><span>&#165;&nbsp;</span><%= @sum_of_col %></h3>
-</div>
+<% if @transactions.length > 0 %>
+  <div class="sumwrap">
+    <h3 class="main"><%= 'Total' %></h3>
+    <h3 class="main"><span>&#165;&nbsp;</span><%= @sum_of_col %></h3>
+  </div>
+<% end %>
 <div id="transactions">
-  <% @transactions.each do |transaction| %>
-    <div class="cat-wrapper">
-      <%= render transaction %>    
-    </div>
+  <% if @transactions.length > 0 %>
+    <% @transactions.each do |transaction| %>
+      <div class="cat-wrapper">
+        <%= render transaction %>    
+      </div>
+    <% end %>
+  <% else %>
+  <div class="empty-body">
+      <div id="typed-strings">
+        <p> Add transactions. </p>
+        <p> AND </p>
+        <p> Keep transactions organized. </p>        
+      </div>
+      <span id="typed"></span>
+    </div>    
   <% end %>
   <div class="main new-cat">
     <div class="w-rectangle">

@@ -195,6 +195,11 @@ form {
   color: white;
 }
 
+.notice-wrapper span {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+}
+
 .field {
   display: flex;
 }
@@ -342,6 +347,47 @@ form .field input {
 .notice-wrapper {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.note {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.field_with_errors {
+  display: flex;
+  flex-grow: 1;
+}
+
+#error_explanation {
+  padding: 10px;
+}
+
+#error_explanation h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: red;
+}
+
+#error_explanation ul {
+  list-style: none;
+  color: red;
+  font-size: 14px;
+  padding-left: 0;
+}
+
+.resend {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input[value="Send me reset password instructions"] {
+  font-size: 12px;
+  border: none;
+  color: #abb2bc;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
 }
 
 @media (min-width: 375px) {
