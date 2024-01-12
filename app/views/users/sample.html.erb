@@ -1,0 +1,3 @@
+<h2>SAMPLE<% if user_signed_in? %>
+  <%= button_to "LOG OUT", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+<% end %></h2>

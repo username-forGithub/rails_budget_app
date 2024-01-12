@@ -1,0 +1,26 @@
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div id="avatar" class="field">    
+      <label for="user_imagefile"><%= image_tag('account.png')%><span>Upload picture</span></label>
+      <%= f.file_field :imagefile,  placeholder: 'Upload picture' %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :fullname, autofocus: true, placeholder: 'Full name' %>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, placeholder: 'Email', autocomplete: "email" %>
+    </div>
+
+    <div class="field">   
+      <%= f.password_field :password, placeholder: 'Password', autocomplete: "new-password" %>
+    </div>
+
+    <div class="actions" id="signupnone">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
+

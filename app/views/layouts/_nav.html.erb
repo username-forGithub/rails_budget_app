@@ -1,0 +1,29 @@
+<% url = request.original_fullpath %>
+  <% if url.length != 1 %>
+  <nav>
+    <div class="nav">  
+      <a href="/" class="back"><%= image_tag("left.png") %></a>
+      <% if url.include? "password" %>    
+        <h5><%= 'FORGOT?' %></h5>  
+      <% elsif url.include? "sign_up" %>   
+        <h5><%= 'REGISTER' %></h5>
+      <% elsif url.include? "sign_in" %>    
+        <h5><%= 'LOGIN' %></h5>
+      <% elsif url.include? "transactions" %>    
+        <h5><%= 'TRANSACTIONS' %></h5>
+      <% else %>
+        <h5><%= url.split('/')[1].upcase %> </h5>  
+      <% end %> 
+      
+      <% if user_signed_in? %>
+        <div class="btn">
+          <%= button_to "LOG OUT", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+        </div>
+      <% elsif url.include? "sign_in" %> 
+         <h6 id="nav-btn">Log in</h6>
+      <% else %>
+        <h6 id="nav-btn">Next</h6>
+      <% end %>  
+    </div> 
+  </nav>
+<% end %>
